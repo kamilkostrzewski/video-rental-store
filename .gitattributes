@@ -72,6 +72,4 @@
 # `test/test_blob.rb#test_vendored` if you make any changes.
 
 * linguist-vendored
-*.cs linguist-vendored=false
-*.cshtml linguist-vendored=false
-*.js linguist-vendored=false
+*.js linguist-vendored=true
