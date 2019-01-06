@@ -10,28 +10,19 @@ namespace VideoRentalStore.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies/Random
-        public ActionResult Random()
+        // GET: Movies
+        public ActionResult Index()
         {
-            var movie = new Movie(){ Name = "Shrek!"};
-            var customers = new List<Customer>()
+            var movies = new MoviesViewModel
             {
-                new Customer { Name = "Customer 1" },
-                new Customer { Name = "Customer 2" }
-            };
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
+                Movies = new List<Movie>
+                {
+                    new Movie {Id = 1, Name = "Shrek"},
+                    new Movie {Id = 2, Name = "WALL-E"}
+                }
             };
 
-            return View(viewModel);
-        }
-        
-        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
-        public ActionResult ByReleaseDate(int year, int month)
-        {
-            return Content($"{year}/{month}");
+            return View(movies);
         }
     }
 }

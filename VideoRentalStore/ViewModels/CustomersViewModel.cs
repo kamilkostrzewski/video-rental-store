@@ -6,9 +6,8 @@ using VideoRentalStore.Models;
 
 namespace VideoRentalStore.ViewModels
 {
-    public class RandomMovieViewModel
+    public class CustomersViewModel
     {
-        public Movie Movie { get; set; }
-        public List<Customer> Customers { get; set; }
+        public IEnumerable<Customer> Customers { get; set; }
     }
 }
