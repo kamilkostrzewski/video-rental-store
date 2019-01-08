@@ -6,23 +6,33 @@
 }
 
 <h2>Customers</h2>
-
-<div>
-    <table>
-        <tr>
-            <th>Customer</th>
-        </tr>
-        @foreach (var customer in @Model.Customers)
-        {
-            <tr><td>
-                @Html.ActionLink(
-                    @customer.Name, 
-                    "Details", 
-                    "Customers", 
-                    new { id = @customer.Id},
-                    null
-                    )
-            </td></tr>
-        }
+@if (!Model.Customers.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in @Model.Customers)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(
+                            @customer.Name,
+                            "Details",
+                            "Customers",
+                            new {id = @customer.Id},
+                            null)
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
-</div>
+}
+
