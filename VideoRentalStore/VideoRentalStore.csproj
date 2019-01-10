@@ -197,6 +197,18 @@
     <Compile Include="Migrations\201901101842517_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201901101842517_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901101933260_AddNameColumnToMembershipTypeTable.cs" />
+    <Compile Include="Migrations\201901101933260_AddNameColumnToMembershipTypeTable.Designer.cs">
+      <DependentUpon>201901101933260_AddNameColumnToMembershipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901101943328_SetNameColumnNullable.cs" />
+    <Compile Include="Migrations\201901101943328_SetNameColumnNullable.Designer.cs">
+      <DependentUpon>201901101943328_SetNameColumnNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901101950328_UpdateMembershipTypesAddingNameValues.cs" />
+    <Compile Include="Migrations\201901101950328_UpdateMembershipTypesAddingNameValues.Designer.cs">
+      <DependentUpon>201901101950328_UpdateMembershipTypesAddingNameValues.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -337,6 +349,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901101842517_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201901101842517_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101933260_AddNameColumnToMembershipTypeTable.resx">
+      <DependentUpon>201901101933260_AddNameColumnToMembershipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101943328_SetNameColumnNullable.resx">
+      <DependentUpon>201901101943328_SetNameColumnNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101950328_UpdateMembershipTypesAddingNameValues.resx">
+      <DependentUpon>201901101950328_UpdateMembershipTypesAddingNameValues.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
