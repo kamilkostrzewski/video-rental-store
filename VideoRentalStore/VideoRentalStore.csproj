@@ -217,9 +217,22 @@
     <Compile Include="Migrations\201901102011219_SetBirthDateColumnNullable.Designer.cs">
       <DependentUpon>201901102011219_SetBirthDateColumnNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901102115391_NewGenresTable.cs" />
+    <Compile Include="Migrations\201901102115391_NewGenresTable.Designer.cs">
+      <DependentUpon>201901102115391_NewGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901102120023_FillGenresTable.cs" />
+    <Compile Include="Migrations\201901102120023_FillGenresTable.Designer.cs">
+      <DependentUpon>201901102120023_FillGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901102136023_AddGenreReleaseDateDateAddedNumberInStock.cs" />
+    <Compile Include="Migrations\201901102136023_AddGenreReleaseDateDateAddedNumberInStock.Designer.cs">
+      <DependentUpon>201901102136023_AddGenreReleaseDateDateAddedNumberInStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -372,6 +385,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901102011219_SetBirthDateColumnNullable.resx">
       <DependentUpon>201901102011219_SetBirthDateColumnNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102115391_NewGenresTable.resx">
+      <DependentUpon>201901102115391_NewGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102120023_FillGenresTable.resx">
+      <DependentUpon>201901102120023_FillGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901102136023_AddGenreReleaseDateDateAddedNumberInStock.resx">
+      <DependentUpon>201901102136023_AddGenreReleaseDateDateAddedNumberInStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
