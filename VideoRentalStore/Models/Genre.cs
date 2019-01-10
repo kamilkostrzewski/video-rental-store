@@ -6,17 +6,12 @@ using System.Web;
 
 namespace VideoRentalStore.Models
 {
-    public class MembershipType
+    public class Genre
     {
         public byte Id { get; set; }
 
-        [StringLength(50)]
+        [Required]
+        [StringLength(255)]
         public string Name { get; set; }
-
-        public int SignUpFee { get; set; }
-
-        public byte DurationInMonths { get; set; }
-
-        public byte DiscountRate { get; set; }
     }
 }

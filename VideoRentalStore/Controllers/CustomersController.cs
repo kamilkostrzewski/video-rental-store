@@ -1,47 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VideoRentalStore.Models;
-using VideoRentalStore.ViewModels;
 
 namespace VideoRentalStore.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customers/Details
+        private ApplicationDbContext _context;
+
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Index()
         {
-            var customers = new CustomersViewModel
-            {
-                Customers = new List<Customer>
-                {
-                    new Customer {Id = 1, Name = "Adam Smith"},
-                    new Customer {Id = 2, Name = "Glen Johnson"}
-                }
-            };
+            var customers = _context.Customers
+                .Include(c => c.MembershipType).ToList();
             return View(customers);
         }
 
         public ActionResult Details(int id)
         {
-            var customers = new CustomersViewModel
+            var customers = _context.Customers
+                .Include(c => c.MembershipType)
+                .SingleOrDefault(c => c.Id == id);
+
+            if (customers == null)
             {
-                Customers = new List<Customer>
-                {
-                    new Customer {Id = 1, Name = "Adam Smith"},
-                    new Customer {Id = 2, Name = "Glen Johnson"}
-                }
-            };
-            foreach (var customer in customers.Customers)
-            {
-                if (customer.Id == id)
-                {
-                    return View(customer);
-                }
+                return HttpNotFound();
             }
-            return HttpNotFound();
+
+            return View(customers);
         }
     }
 }
