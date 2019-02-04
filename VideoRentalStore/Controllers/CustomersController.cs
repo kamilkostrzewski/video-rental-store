@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using VideoRentalStore.Models;
+using VideoRentalStore.ViewModel;
 
 namespace VideoRentalStore.Controllers
 {
     public class CustomersController : Controller
     {
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public CustomersController()
         {
@@ -20,6 +18,15 @@ namespace VideoRentalStore.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+
+        public ActionResult New()
+        {
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+            return View(viewModel);
         }
 
         public ActionResult Index()
