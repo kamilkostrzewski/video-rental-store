@@ -229,6 +229,10 @@
     <Compile Include="Migrations\201901102136023_AddGenreReleaseDateDateAddedNumberInStock.Designer.cs">
       <DependentUpon>201901102136023_AddGenreReleaseDateDateAddedNumberInStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904281532358_AddGenreIdToMovieModel.cs" />
+    <Compile Include="Migrations\201904281532358_AddGenreIdToMovieModel.Designer.cs">
+      <DependentUpon>201904281532358_AddGenreIdToMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModel\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -397,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901102136023_AddGenreReleaseDateDateAddedNumberInStock.resx">
       <DependentUpon>201901102136023_AddGenreReleaseDateDateAddedNumberInStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904281532358_AddGenreIdToMovieModel.resx">
+      <DependentUpon>201904281532358_AddGenreIdToMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
