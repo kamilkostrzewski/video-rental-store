@@ -1,6 +1,4 @@
 # video-rental-store
-ASP.NET MVC site for education purpose.
+ASP.NET MVC site for education purposes.
 
 Work in progress
-
-hide=css
